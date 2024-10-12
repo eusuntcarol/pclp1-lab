@@ -1,17 +1,32 @@
-# Structure of a simple C program  
+# ❗️ EXTRA STUFF FOR ADVANCED STUDENTS ❗️
+
+# Structure of a simple C program
   
 ## Basic structure  
   
 1. **Preprocessor Directives**: Include necessary header files.  
 ```c  
-#include <stdio.h>  
+#include <stdio.h>    // include a library
+
+#define GRUPA "314CD" // define a macro
+
+#ifdef GRUPA          // check if macro was previously defined
+#define HELLO printf(GRUPA)
+#endif
+
+#ifndef GRUPA         // check if macro was NOT previously defined
+#define GRUPA "314CD"
+#endif
+
+#define HELLO(who) printf("Please say hello to %s. Hello, %s!", who, who)
+                      // macro with parameters
 ```
   
 2. **Main Function**: The entry point of the program.  
   
 3. **Function Definitions**: Any additional functions called from `main`.  
   
-## Different ways to define `main`  
+## Different ways to define `main`
   
 1. **`int main(void)`**:  
     - No parameters.  
@@ -28,25 +43,16 @@
     - Three parameters: `argc`, `argv`, and `envp` (environment pointers).  
     - Useful for accessing environment variables.
 
-# How to write header files for your project
+# How to write header files for your project and link multiple sources together
 
-## Steps to write `.h` and `.c` files  
+## Steps to write `.h` and `.c` files
 
-1. Write the Header File (`.h`)  
+1. Write the Header File (`.h`)
+The header file generally consists only function signatures and global variables,
+not actual implementations.
   
-- **Purpose**: Contains declarations of functions or global variables
-- **Example**: `utils.h`  
-```c  
-#ifndef UTILS_H  // HEADER GUARD -> preprocessor directive
-#define UTILS_H
-
-// global vars
-// function declarations
-
-#endif
-```  
-  
-2. Write the source file (`.c`) that contains the actual implementations of the functions declared in the header file. 
+2. Write the source file (`.c`) that contains the actual implementations of the
+functions declared in the header file. 
   
 3. Use the `.h` header in another `.c` source using `#include "utils.h`
 
@@ -62,7 +68,8 @@ gcc app.c utils.c -o app.out
   
 ## Header Guards  
   
-- **Purpose**: Prevents multiple inclusions of the same header file, avoiding errors.  
+- **Purpose**: Prevents multiple inclusions of the same header file,
+avoiding errors.  
 - **How It Works**:  
 ```c  
 #ifndef UTILS_H // <-- checks if UTILS_H was previously defined
@@ -79,14 +86,17 @@ gcc app.c utils.c -o app.out
 
 ![gcc](./assets/gcc.png)
 
-The GCC (GNU Compiler Collection) compiling process consists of four main steps: preprocessing, compilation, assembly, and linking. Each step transforms the source code, eventually producing an executable program.  
+The GCC (GNU Compiler Collection) compiling process consists of four main steps:
+preprocessing, compilation, assembly, and linking. Each step transforms the
+source code, eventually producing an executable program.  
   
 #### 1. Preprocessing  
 - **Input**: Source code file (`.c`)  
 - **Output**: Preprocessed source file (`.i`)  
 - **Command**: `gcc -E file.c -o file.i`  
   
-The preprocessor handles directives such as `#include` and `#define`, and outputs the preprocessed code.  
+The preprocessor handles directives such as `#include` and `#define`, and outputs
+the preprocessed code.  
   
 #### 2. Compilation  
 - **Input**: Preprocessed source file (`.i`)  
@@ -100,11 +110,13 @@ The compiler translates the preprocessed source code into assembly code.
 - **Output**: Object file (`.o`)  
 - **Command**: `gcc -c file.s -o file.o`  
   
-The assembler converts the assembly code into machine code, producing an object file.  
+The assembler converts the assembly code into machine code, producing an
+object file.
   
 #### 4. Linking  
 - **Input**: Object file(s) (`.o`)  
-- **Output**: Executable file (usually with no extension, or `.out` on Unix-like systems)  
+- **Output**: Executable file (usually with no extension, or `.out` on
+Unix-like systems)  
 - **Command**: `gcc file.o -o executable`  
   
 The linker combines object files and libraries to produce the final executable.  
@@ -118,24 +130,33 @@ gcc file.c -o executable_name
 
 ### Linking Types:
 
-**Static Linking:** The code of both sources is injected directly into the executable.
-*Example:* `gcc app.c hello.c -o app.out`
-*Explanation:* These files will be put together in the executable file.
+**Static Linking:** The code of both sources is injected directly into the
+executable.<br>
+*Example:* `gcc app.c hello.c -o app.out`<br>
+*Explanation:* These files will be put together in the executable file.<br>
 
-**Dynamic Linking:** The library is loaded at runtime, allowing the same code to be used by multiple processes at once (e.g., libc, math library).
-*Example:* `gcc app.c -lm -o app.out`
-*Explanation:* Code from `math.h` won't be present in the executable file, during the linking process there will be some placeholders in the binary that will be resolved at runtime.
+**Dynamic Linking:** The library is loaded at runtime, allowing the same code
+to be used by multiple processes at once (e.g., libc, math library).<br>
+*Example:* `gcc app.c -lm -o app.out`<br>
+*Explanation:* Code from `math.h` won't be present in the executable file,
+during the linking process there will be some placeholders in the binary
+that will be resolved at runtime.
 
 # Introduction to Makefile  
   
-A Makefile is a special file used in software development to manage the build process of a project.
-It is used by the `make` utility, a build automation tool that automatically compiles and links programs.
+A Makefile is a special file used in software development to manage the build
+process of a project.
+It is used by the `make` utility, a build automation tool that automatically
+compiles and links programs.
   
 ### What is a Makefile and make?  
-- **Makefile**: A text file containing a set of directives used by the `make` build automation tool to compile and link a program.  
-- **Make**: A command-line tool that reads the Makefile and executes the specified tasks to build your project.
+- **Makefile**: A text file containing a set of directives used by the `make`
+build automation tool to compile and link a program.  
+- **Make**: A command-line tool that reads the Makefile and executes the
+specified tasks to build your project.
   
 ### How does it help automate tasks?  
-- **Dependencies**: Makefile specifies which files depend on which others. If a file changes, `make` knows which other files need to be recompiled.
+- **Dependencies**: Makefile specifies which files depend on which others.
+If a file changes, `make` knows which other files need to be recompiled.
 
 - **Targets and Rules**: You define "targets" (e.g., executable files) and "rules" (commands to build these targets). `make` uses these to automate the process.

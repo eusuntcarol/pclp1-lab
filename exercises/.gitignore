@@ -1,5 +1,5 @@
 *.out
 *.o
 ex*
-!ex4.c
+!ex1.c
 Makefile
