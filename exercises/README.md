@@ -23,13 +23,13 @@
 
 5. Folosind librăria matematică, afișați cubul unui număr citit de la tastatură.
 
-*Scop:* familiarizarea cu căutarea în documentație și procesul de linkare
-**HINT:** Vezi ce funcție ai putea folosi în documentația librăriei [(click)](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/math.h.html).
+*Scop:* familiarizarea cu căutarea în documentație și procesul de linkare<br>
+**HINT:** Vezi ce funcție ai putea folosi în documentația librăriei [(click)](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/math.h.html).<br>
 **HINT:** Nu uita să dai link la librăria matematică cu `-lm`.
 
 6. Verificați folosind două abordări diferite dacă un număr natural citit de la tastatură este par.
 
-*Scop:* familiarizarea cu operatorii.
+*Scop:* familiarizarea cu operatorii.<br>
 **HINT**: operație aritmetică și operație pe biți
 
 ### BONUS / HARD:
@@ -41,5 +41,5 @@
 8. Scrie un program care primește ca parametri (nu de la tastatură) două numere și le adună.
 Acest program scrie pe ecran mesaje de eroare dacă nu se introduc două numere.
 
-*Scop:* familiarizarea cu variațiile funcției main
+*Scop:* familiarizarea cu variațiile funcției main<br>
 **HINT:** aveți nevoie de `#include <stdlib.h>` împreună cu funcția `atoi(n)`, parametrii sunt pasați ca șiruri de caractere și trebuie convertiți pentru a-i putea aduna.
