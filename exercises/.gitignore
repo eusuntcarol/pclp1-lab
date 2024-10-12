@@ -1,0 +1,5 @@
+*.out
+*.o
+ex*
+!ex4.c
+Makefile
