@@ -1,4 +1,4 @@
-all: app.out argc.out argv.out envp.out app_include.out app_math.out
+all: app.out argc.out argv.out envp.out app_include.out app_math.out type_bytes.out
 
 # --------------------------------------------------
 
@@ -34,6 +34,11 @@ argv.out: argv.c
 
 envp.out: envp.c
 	gcc -o envp.out envp.c
+
+# --------------------------------------------------
+
+type_bytes.out: type_bytes.c
+	gcc -o type_bytes.out type_bytes.c
 
 # clean up
 .PHONY: clean
