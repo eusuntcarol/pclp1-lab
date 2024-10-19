@@ -1,8 +1,12 @@
 # Exerciții propuse pentru laboratorul 2
 
-### RECAP FROM LAST LAB
+### RECAP
  - Scrie un program într-un fișier denumit `warmup.c` care citește de la tastatură două numere naturale, le adună și afișează rezultatul pe ecran.
  - Ce e type overflow?
+
+### Referințe utile
+- [exemplele din lab](https://github.com/eusuntcarol/pclp1-lab/tree/lab3/examples)
+- [laboratorul de pe ocw](https://ocw.cs.pub.ro/courses/programare/laboratoare/lab03)
 
 ### EASY
 
@@ -60,7 +64,7 @@ Scrieţi un program care verifică dacă un număr citit de la tastatură este p
 1234
 > Output: "NU E PALINDROM"
 -1
->Output: "STOP"
+> Output: "STOP"
 ```
 
 *Scop*: exersarea capacității de a extinde un cod deja existent + familiarizarea cu instrucțiunile *speciale*
@@ -105,6 +109,8 @@ Scrieți un program care rezolvă aceeași problemă ca mai devreme, doar că ac
 8. Creați un fișier `ex8.c`.
 
 Scrieți un program care convertește un număr din baza 10 în baza 2.
+Dacă s-au calculat mai puțin de 32 de biți, restul până la 32 îi considerăm 0 (padding).
+Afișați biții grupați câte 8 (grupați în bytes).
 
 *Exemplu de rulare:*
 ```sh
