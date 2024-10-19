@@ -28,7 +28,7 @@
 
 2. Creați un fișier `ex2.c`.
 
-Scrieţi un program care verifică dacă un număr citit de la tastatură este palindrom.
+Scrieţi un program care verifică dacă un număr citit de la tastatură este palindrom.<br>
 *Un număr se consideră palindrom dacă citit invers este identic cu numărul iniţial.*
 
 *Exemple de rulare:*
@@ -46,8 +46,8 @@ Scrieţi un program care verifică dacă un număr citit de la tastatură este p
 
 3. Creați un fișier `ex3.c`.
 
-**i.** Extindeți funcționalitatea programului pe care l-ați scris în `ex2.c` astfel încât să permită citirea a oricât de multe numere și verifică dacă aceste numere respectă condiția de palindrom.
-*Programul se oprește la întâlnirea unui număr negativ.*
+**i.** Extindeți funcționalitatea programului pe care l-ați scris în `ex2.c` astfel încât să permită citirea a oricât de multe numere și verifică dacă aceste numere respectă condiția de palindrom.<br>
+*Programul se oprește la întâlnirea unui număr negativ.*<br>
 *Side note: **NU** trebuie să folosiți vectori, lucrați cu numărul odată cu citirea lui.*
 
 **ii.** Adaptați codul astfel încât să folosiți `break`, dacă nu ați folosit deja.
@@ -72,7 +72,7 @@ Scrieţi un program care verifică dacă un număr citit de la tastatură este p
 ### MEDIUM
 4. Creați un fișier `ex4.c`.
 
-Ne propunem să afișăm în format englez o dată introdusă de la tastatură. Formatul citirii este `număr` **`.`** `număr`.
+Ne propunem să afișăm în format englez o dată introdusă de la tastatură. Formatul citirii este `număr` **`.`** `număr`.<br>
 **Folosiți strict instrucțiunile `if`, `else if` și `else`.**
 
 Verificați dacă datele sunt introduse corect:
@@ -102,14 +102,15 @@ Scrieți un program care rezolvă aceeași problemă ca mai devreme, doar că ac
 
 6. Care din variante vi se pare mai lizibilă?
 
-7. Ștergeți un `break` și rulați programul astfel încât să intre în `case`-ul asociat instrucțiunii `break` pe care ați șters-o. Ce observați?
+7. Ștergeți un `break` și rulați programul astfel încât să intre în `case`-ul asociat instrucțiunii `break` pe care ați șters-o.<br>
+Ce observați?
 
 ### ADVANCED
 
 8. Creați un fișier `ex8.c`.
 
-Scrieți un program care convertește un număr din baza 10 în baza 2.
-Dacă s-au calculat mai puțin de 32 de biți, restul până la 32 îi considerăm 0 (padding).
+Scrieți un program care convertește un număr din baza 10 în baza 2.<br>
+Dacă s-au calculat mai puțin de 32 de biți, restul până la 32 îi considerăm 0 (padding).<br>
 Afișați biții grupați câte 8 (grupați în bytes).
 
 *Exemplu de rulare:*
