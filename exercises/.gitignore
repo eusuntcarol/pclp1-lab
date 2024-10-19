@@ -1,0 +1,5 @@
+*.out
+*.o
+ex*.c
+Makefile
+*.zip
