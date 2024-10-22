@@ -31,8 +31,8 @@ int main(void) {
 
     scanf("%d", &n);
 
-    // long long res = fib_iter(n);
-    long long res = fib_rec(n);
+    long long res = fib_iter(n);
+    // long long res = fib_rec(n);
 
     printf("%lld\n", res);
 

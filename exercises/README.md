@@ -1,20 +1,12 @@
-# Exerciții propuse pentru laboratorul 2
-
-### RECAP
- - Scrie un program într-un fișier denumit `warmup.c` care citește de la tastatură două numere naturale, le adună și afișează rezultatul pe ecran.
- - Ce e type overflow?
-
-### Referințe utile
-- [exemplele din lab](https://github.com/eusuntcarol/pclp1-lab/tree/lab3/examples)
-- [laboratorul de pe ocw](https://ocw.cs.pub.ro/courses/programare/laboratoare/lab03)
+# Funcții, iterativ vs. recursiv
 
 ### EASY
 
 1. Creați un fișier `ex1.c`.
 
-**i.** Scrieți un program care citește de la tastatură un număr natural `n`, apoi `n` numere naturale și afișează suma acestora.
+**i.** Scrie un program care citește de la tastatură un număr natural `n`, iar apoi apelează o funcție *iterativă*, `sum_iter`, care citește `n` numere naturale și întoarce suma acestora. Rezultatul se afișează la stdout (pe ecran).
 
-**ii.** Adaptați programul astfel încât să aibă aceeași funcționalitate, dar folosind o etichetă și `goto`.
+**ii.** Pornind de la funcția anterioară, scrie o funcție *recursivă*, `sum_rec`, care rezolvă aceeași problemă.
 
 *Exemplu de rulare:*
 ```sh
@@ -24,11 +16,9 @@
 > Output: 6
 ```
 
-*Scop*: familiarizarea cu structurile repetitive
-
 2. Creați un fișier `ex2.c`.
 
-Scrieţi un program care verifică dacă un număr citit de la tastatură este palindrom.<br>
+Scrie un program care conține o funcție *recursivă* care verifică dacă un număr citit de la tastatură este palindrom.<br>
 *Un număr se consideră palindrom dacă citit invers este identic cu numărul iniţial.*
 
 *Exemple de rulare:*
@@ -42,17 +32,17 @@ Scrieţi un program care verifică dacă un număr citit de la tastatură este p
 > Output: "NU E PALINDROM"
 ```
 
-*Scop*: familiarizarea cu structurile repetitive și condițiile
 
-3. Creați un fișier `ex3.c`.
+3. Creează un fișier `ex3.c`.
+(**EXTRA**, treci la următorul și dacă mai ai timp te întorci aici)
 
-**i.** Extindeți funcționalitatea programului pe care l-ați scris în `ex2.c` astfel încât să permită citirea a oricât de multe numere și verifică dacă aceste numere respectă condiția de palindrom.<br>
+**i.** Extinde funcționalitatea programului pe care l-ai scris în `ex2.c` astfel încât să permită citirea a oricât de multe numere și verifică dacă aceste numere respectă condiția de palindrom.<br>
 *Programul se oprește la întâlnirea unui număr negativ.*<br>
 *Side note: **NU** trebuie să folosiți vectori, lucrați cu numărul odată cu citirea lui.*
 
-**ii.** Adaptați codul astfel încât să folosiți `break`, dacă nu ați folosit deja.
+**ii.** Adaptează codul astfel încât să folosiți `break`, dacă nu ai folosit deja.
 
-**iii.** Folosiți atât `while`, cât și `do ... while`. Explicați care sunt diferențele.
+**iii.** Folosește, pe rând, atât `while`, cât și `do ... while`. Explică care sunt diferențele.
 
 *Exemplu de rulare:*
 ```sh
@@ -67,47 +57,38 @@ Scrieţi un program care verifică dacă un număr citit de la tastatură este p
 > Output: "STOP"
 ```
 
-*Scop*: exersarea capacității de a extinde un cod deja existent + familiarizarea cu instrucțiunile *speciale*
 
 ### MEDIUM
-4. Creați un fișier `ex4.c`.
 
-Ne propunem să afișăm în format englez o dată introdusă de la tastatură. Formatul citirii este `număr` **`.`** `număr`.<br>
-**Folosiți strict instrucțiunile `if`, `else if` și `else`.**
+4. Creează un fișier `ex4.c`.
 
-Verificați dacă datele sunt introduse corect:
-- 28 de zile pentru februarie
-- 30 de zile pentru aprilie, iunie, septembrie, noiembrie
-- 31 de zile pentru ianuarie, martie, mai, iulie, august, octombrie și decembrie
-- lunile între 1 și 12
+Scrie o funcție cu semnătura `int replace(int n, int x, int y)` care înlocuiește toate aparițiile cifrei `x` din `n` cu cifra `y`.
 
-*Exemple de rulare:*
+*Exemplu de folosire:*
 ```sh
-./ex4.out
-05.02
-Output: "5th February"
+replace(503554455, 5, 8)
 
-./ex4.out
-01.01
-Output: "1st January"
-
-./ex4.out
-32.12
-Output: "Invalid month"
+> Return: 803884488
 ```
 
-5. Creați un fișier `ex5.c`.
+5. Creează un fișier `ex5.c`.
 
-Scrieți un program care rezolvă aceeași problemă ca mai devreme, doar că acum **folosind strict instrucțiunea `switch` în loc de `if`, `else if` și `else`**.
+Scrie o funcție recursivă care citește numere încontinuu până la citirea unui număr negativ.<br>
+Când se îndeplinește condiția de oprire, se vor afișa pe ecran numărul de numere pare, impare, suma numerelor pare și a celor impare.
 
-6. Care din variante vi se pare mai lizibilă?
+**Q:** Ai cum să faci funcția asta fără să transmiți ca parametru datele calculate?
 
-7. Ștergeți un `break` și rulați programul astfel încât să intre în `case`-ul asociat instrucțiunii `break` pe care ați șters-o.<br>
-Ce observați?
+*Exemplu de rulare:*
+```sh
+./ex5.out
+1 2 3 4 5 -1
+> Output: "Even: 2, Odd: 3
+Even sum: 6, Odd sum: 9"
+```
 
 ### ADVANCED
 
-8. Creați un fișier `ex8.c`.
+6. Creați un fișier `ex6.c`.
 
 Scrieți un program care convertește un număr din baza 10 în baza 2.<br>
 Dacă s-au calculat mai puțin de 32 de biți, restul până la 32 îi considerăm 0 (padding).<br>
@@ -115,22 +96,21 @@ Afișați biții grupați câte 8 (grupați în bytes).
 
 *Exemplu de rulare:*
 ```sh
-./ex8.out
+./ex6.out
 5
 > Output: 00000000 00000000 00000000 00000101
 ```
 
-**HINT**: Folosiți-vă de un vector sau de recursivitate.
+**HINT**: Există vreo instrucțiune specială care v-ar putea ajuta să printați padding-ul?
 
-9. Creați un fișier `ex9.c`.
+7. Creați un fișier `ex7.c`.
 
-Scrieți un program care convertește un număr din baza 2 în baza 10.
+Scrieți un program care convertește un număr din baza 2 în baza 10.<br>
+De la tastatură se citesc biții cei mai din stânga (least significant bits). Restul până la 32 îi considerăm 0 (padding).
 
 *Exemplu de rulare:*
 ```sh
-./ex9.out
+./ex7.out
 101
 > Output: 5
 ```
-
-*Side note:* Introducem biții cei mai din stânga. Restul până la 32 îi considerăm 0 (padding).
