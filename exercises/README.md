@@ -131,7 +131,7 @@ Afișează biții grupați câte 8 (grupați în bytes).
 
 *Exemplu de rulare:*
 ```sh
-./ex6.out
+./ex5.out
 5
 > Output: 00000000 00000000 00000000 00000101
 ```
@@ -146,7 +146,7 @@ Afișează, pe rând, cele două numere convertite și rezultatul, după cum e p
 
 *Exemplu de rulare:*
 ```sh
-./ex7.out
+./ex6.out
 5 11
 
 > Output:
@@ -155,7 +155,7 @@ B = 11 = 00000000 00000000 00000000 00001011
 A + B = 16 = 00000000 00000000 00000000 00010000
 
 
-./ex7.out
+./ex6.out
 5 11
 
 > Output:
