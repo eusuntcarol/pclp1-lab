@@ -7,12 +7,12 @@
 **În timp ce rezolvați, rulați manual programele, iar când sunteți siguri că ați terminat, rulați scriptul aferent exercițiului pentru a testa corectitudinea.**
 
 **Pentru a descărca scripturile, urmați pașii:**
-1. `git clone https://github.com/eusuntcarol/pclp1-lab` - descarcă repository cu laboratoarele
-2. `cd pclp1-lab` - navigăm în directorul descărcat
-3. `git fetch origin` - descărcăm toate "ramurile" proiectului
-4. `git checkout lab4` - schimbăm "ramura" pe cea a laboratorului de azi
-5. `cd exercises` - navigăm în directorul cu exerciții
-6. `chmod +x *.sh` - facem toate scripturile executabile
+1. `git clone https://github.com/eusuntcarol/pclp1-lab`
+2. `cd pclp1-lab`
+3. `git fetch origin lab4`
+4. `git checkout lab4`
+5. `cd exercises`
+6. `chmod +x *.sh`
 7. Pentru testarea unui exercițiu folosește `./check.sh <nr_exercitiu>`
 8. Pentru rularea tuturor testelor folosește `./all.sh`
 
