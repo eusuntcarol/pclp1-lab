@@ -1,0 +1,4 @@
+*.c
+*_yours.out
+*.out
+!*_ref.out
