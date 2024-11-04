@@ -121,16 +121,21 @@ Aceste funcții vor avea următoarea semnătură:
 // v este vectorul
 // n este numărul de elemente din vector
 // f este funcția care se aplică pe fiecare element din vector
- // parametrul lui f este un pointer la elementul din v pe care se aplică f
- // funcția map va efectua modificările in-place, adică va modifica direct valorile din vectorul v
+// parametrul lui f este un pointer la elementul din v pe care
+//      se aplică f
+// funcția map va efectua modificările in-place, adică va modifica
+//      direct valorile din vectorul v
 void map(int *v, int n, void (*f)(int *));
 
 
 // v este vectorul
 // n este numărul de elemente din vector
-// cond este funcția care verifică condiția și returnează 1 dacă elementul trebuie păstrat, 0 altfel
-// parametrul lui f este un pointer la elementul din v pe care se verifică condiția
-// funcția filter va efectua modificările in-place, adică direct în vectorul v (nu va crea un nou vector), deci n va fi modificat
+// cond este funcția care verifică condiția și returnează 1
+//      dacă elementul trebuie păstrat, 0 altfel
+// parametrul lui f este un pointer la elementul din v pe care
+//      se verifică condiția
+// funcția filter va efectua modificările in-place, adică direct
+//      în vectorul v (nu va crea un nou vector), deci n va fi modificat
 void filter(int *v, int *n, int (*cond)(int *)); 
 
 
@@ -139,7 +144,8 @@ void filter(int *v, int *n, int (*cond)(int *));
 // f este funcția care combină elementele
 // f va primi 2 parametri, elementele din vector
 // reduce va returna rezultatul combinării elementelor
-// în general, unul dintre parametrii lui f va fi rezultatul parțial al operației
+// în general, unul dintre parametrii lui f va fi rezultatul parțial
+//      al operației
 int reduce(int *v, int n, int (*f)(int, int)); 
 ```
 
