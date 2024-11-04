@@ -187,7 +187,7 @@ Se citește un număr `c` care reprezintă numărul de comenzi care vor fi
 aplicate pe vector.<br>
 
 Comenzile vor fi de forma: `<tip> <index>`, `MAPPERS` având tipul `1`,
-`FILTERS` `2` și `REDUCERS` `3`.<br>
+`FILTERS` `2` și `REDUCERS` `3`, iar `index` este poziția operației din vector.<br>
 Deci, dacă se citește `0 2`, se va aplica `square` pe vector, dacă se citește
 `1 1`, se va aplica `less_than_1000` pe vector, iar dacă se citește `2 3`,
 se va aplica `min` pe vector.<br>
