@@ -1,4 +1,4 @@
-# Tablouri, vectori unidimensionali
+# 🔠 Șiruri de caractere (strings)
 
 **Înainte de a rezolva exercițiile, citiți [textul laboratorului](https://ocw.cs.pub.ro/courses/programare/laboratoare/lab10).**
 
