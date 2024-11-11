@@ -8,10 +8,10 @@ fără checker azi, n-am avut suficient timp si pt asta 😅😅
 
 1. Creați un fișier `ex1.c`.
 
-Se citesc un șir de caractere, un cuvânt și un caracter.
-Se afișează caracterul și cuvântul citite.
-Se afișează șirul de caractere citit și lungimea acestuia.
-Se numără și se afișează de câte ori apare caracterul specificat în șirul de caractere.
+Se citesc un șir de caractere, un cuvânt și un caracter.<br>
+Se afișează caracterul și cuvântul citite.<br>
+Se afișează șirul de caractere citit și lungimea acestuia.<br>
+Se numără și se afișează de câte ori apare caracterul specificat în șirul de caractere.<br>
 Se numără și se afișează de câte ori apare cuvântul specificat în șirul de caractere și pozițiile la care începe fiecare apariție.
 
 *Exemple de rulare:*
@@ -33,7 +33,7 @@ Ana banana 11
 
 2. Creați un fișier `ex2.c`.
 
-Se citește un șir de caractere format din litere mari și mici ale alfabetului englez și spații.
+Se citește un șir de caractere format din litere mari și mici ale alfabetului englez și spații.<br>
 Pentru fiecare literă, să se transforme literele mici în litere mari și invers.
 
 *Exemplu de rulare:*
@@ -50,14 +50,14 @@ Se Ia nOtA MAAAre La PARtial
 
 3. Creați un fișier `ex3.c`.
 
-Se citesc un șir de caractere și un cuvânt.
-Se elimină toate aparițiile cuvântului din șirul de caractere.
-Dacă ștergerea unui cuvânt lasă un spațiu în exces, acesta este eliminat și el.
-Se afișează șirul de caractere rezultat.
+Se citesc un șir de caractere și un cuvânt.<br>
+Se elimină toate aparițiile cuvântului din șirul de caractere.<br>
+Dacă ștergerea unui cuvânt lasă un spațiu în exces, acesta este eliminat și el.<br>
+Se afișează șirul de caractere rezultat.<br>
 
 *Exemple de rulare:*
 ```sh
-./ex2.out
+./ex3.out
 > Input:
 Sirul de caractere este un sir de caractere
 rac
@@ -65,7 +65,7 @@ rac
 > Output:
 Sirul de catere este un sir de catere
 
-./ex2.out
+./ex3.out
 > Input:
 Ana are mere si pere si pere si mere
 si
@@ -79,8 +79,8 @@ Ana are mere  pere  pere  mere
 
 4. Creează un fișier `ex4.c`.
 
-Se citește de la tastatură un șir de caractere format din litere mici ale alfabetului englez și spații.
-Să se despartă cuvintele din șir folosind spațiile ca separatori și să se numere vocalele și consoanele din fiecare cuvânt.
+Se citește de la tastatură un șir de caractere format din litere mici ale alfabetului englez și spații.<br>
+Să se despartă cuvintele din șir (`strtok`) folosind spațiile ca separatori și să se numere vocalele și consoanele din fiecare cuvânt.
 
 *Exemple de rulare:*
 ```sh
@@ -95,10 +95,10 @@ misto: 2 vocale, 3 consoane
 ```
 
 5. Creați un fișier `ex5.c`
-Ne propunem să înțelegem mai bine cum funcționează funcțiile de manipulare a șirurilor din C.
+Ne propunem să înțelegem mai bine cum funcționează funcțiile de manipulare a șirurilor din C.<br>
 Pentru acest exercițiu, veți implementa propriile voastre funcții:
-`my_strlen`, `my_strcpy`, `my_strcmp`, `mystr_str`.
-Pentru testarea problemei, se va introduce de la tastatură un număr, reprezentând funcția pe care dorim să o testăm.
+`my_strlen`, `my_strcpy`, `my_strcmp`, `mystr_str`.<br>
+Pentru testarea problemei, se va introduce de la tastatură un număr, reprezentând funcția pe care dorim să o testăm.<br>
 După aceea, se vor introduce parametrii necesari pentru funcția respectivă, astfel:
 - numărul 1 pentru `my_strlen`, se va introduce un șir de caractere
 - numărul 2 pentru `my_strcpy`, se va introduce un șir de caractere și un alt șir de caractere
@@ -108,12 +108,13 @@ Rezultatul fiecărei funcții va fi afișat pe ecran, așa cum rezultatul funcț
 
 ### ADVANCED
 
-5. Creați un fișier `ex5.c`.
+6. Creați un fișier `ex6.c`.
 
 Ne propunem să înțelegem mai bine cum funcționează funcția `strtok` din C, așa că vom implementa propria funcție `my_strtok`.
-Funcția `my_strtok` va avea ca parametri un șir de caractere și un șir de caractere ce conține separatorii.
-Funcția va returna un pointer la primul caracter al următorului cuvânt din șirul de caractere sau `NULL` dacă nu mai există cuvinte.
-Funcția va modifica șirul de caractere primit ca primul parametru, astfel încât să înlocuiască separatorii cu terminatori de șir.
+
+Funcția `my_strtok` va avea ca parametri un șir de caractere și un șir de caractere ce conține separatorii.<br>
+Funcția va returna un pointer la primul caracter al următorului cuvânt din șirul de caractere sau `NULL` dacă nu mai există cuvinte.<br>
+Funcția va modifica șirul de caractere primit ca primul parametru, astfel încât să înlocuiască separatorii cu terminatori de șir.<br>
 Funcția se va apela inițial cu primul parametru reprezentând șirul de caractere în care dorim să facem modificările, iar apoi se va apela succesiv cu `NULL` ca prim parametru pentru a obține restul de cuvinte din șir. Cu alte cuvinte, la primul apel, funcția "va încărca" în memoria sa șirul de caractere primit (vezi `static`).
 
 *Exemple de utilizare:*
