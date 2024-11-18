@@ -61,10 +61,11 @@ Afișați reprezentarea binară (ca la ex 1) a numărului întreg x în format b
 
 4. Creează un fișier `ex4.c`.
 
-Storyline: Să zicem că ne plac jocurile video și, după cursul de programare vrem să creăm un joc și să ni-l rulăm pe un microcontroller,
+Storyline: Să zicem că ne plac jocurile video și, după cursul de programare, vrem să creăm un joc și să ni-l rulăm pe un microcontroller,
 să facem un fel de consolă portabilă.
 Suntem studenți, bani de componente prea potente nu avem, așa că ne mulțumim cu un microcontroller cu câțiva KB de memorie,
-deci trebuie să fim cât mai eficienți cu spațiul de memorie pe care îl avem.
+deci trebuie să fim cât mai eficienți cu spațiul de memorie pe care îl avem ca să păstrăm cât mai multă memorie pentru jocul în sine,
+grafici etc.
 
 Setările ar putea consuma destul de mult spațiu dacă am folosi un întreg pentru fiecare în parte, iar cum acestea sunt doar
 de tip on/off sau au doar câteva valori, am putea folosi un singur bit / 2 biți pentru fiecare setare și să le stocăm pe toate într-un întreg.
@@ -90,16 +91,6 @@ Light: high
 Difficulty: easy
 Menu: not shown
 Game over: yes
-```
-
-
-*Exemple de rulare:*
-```sh
-./ex5.out
-> Input:
-
-> Output:
-
 ```
 
 5. Creați un fișier `ex5.c`
