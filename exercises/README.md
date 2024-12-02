@@ -80,7 +80,7 @@ operație de inserare / ștergere din listă
 realocată cu dublul capacității curente
 - căutarea unui student în listă trebuie realizată folosind o funcție de
 căutare binară, acest lucru presupune sortarea listei înaintea căutării
-(folosiți funcția `sort`).
+(opțional: folosiți funcția `qsort` și `bsearch` din `stdlib.h`).
 - se va sorta lista doar inaintea unei operatii de cautare
 - la exit de va elibera toata memoria
 
