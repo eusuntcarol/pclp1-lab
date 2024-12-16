@@ -8,6 +8,7 @@
 
 1.
 **a)** Scrieți o structură `Point` care să conțină două câmpuri de tip întreg: `x` și `y`.
+
 **b)** Scrieți o structură `Polygon` care să conțină un câmp de tip `int` care reprezintă numărul de vârfuri ale poligonului și un vector de `Point`-uri static de maxim 32 de vârfuri care reprezintă vârfurile poligonului.
 
 2.
