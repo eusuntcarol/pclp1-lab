@@ -9,10 +9,10 @@
 1.
 **a)** Scrieți o structură `Point` care să conțină două câmpuri de tip întreg: `x` și `y`.
 
-**b)** Scrieți o structură `Polygon` care să conțină un câmp de tip `int` care reprezintă numărul de vârfuri ale poligonului și un vector de `Point`-uri static de maxim 32 de vârfuri care reprezintă vârfurile poligonului.
+**b)** Scrieți o structură `Polygon` care să conțină un câmp de tip `int` care reprezintă numărul de vârfuri ale poligonului și un vector de `Point`-uri static de maxim 32 de vârfuri care reprezintă vârfurile poligonului. (fix în această ordine)
 
 2.
-Creați un fișier TEXT din care să citiți programatic mai multe poligoane. Formatul fișierului (ordinea datelor în fișier) rămâne la alegerea voastră.
+Creați un fișier TEXT din care să citiți programatic mai multe poligoane. Formatul fișierului (ordinea datelor în fișier) rămâne la alegerea voastră. Poligoanele citite trebuie să fie alocate dinamic.
 
 ### MEDIUM
 
@@ -23,7 +23,7 @@ Scrieți o funcție care translatează un poligon cu o valoare dată pe axa x sa
 Scrieți o funcție care scrie într-un fișier BINAR toate poligoanele citite și translatate anterior.
 
 5.
-Scrieți o funcție care citește toate poligoanele din fișierul binar folosind o singură apelare de `fread`.
+Scrieți o funcție care citește toate poligoanele din fișierul binar folosind o singură apelare de `fread` (sau două, că trebuie să citiți `n` prima dată).
 
 ### ADVANCED
 
