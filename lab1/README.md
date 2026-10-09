@@ -18,12 +18,17 @@ This lab we focus on bringing alive our environments, so everyone will be able t
         - THEN continue with [How to enable virtualization](#how-to-enable-virtualization) section and repeat from point 1 
         - ELSE continue with next point
 1. Open PowerShell with Administrator privileges (right click -> Run as Admin)
-1. Run the following commands in PowerShell:
+1. Run the following command in PowerShell:
+    ```powershell
+    wsl --install
+    ```
+1. Restart your laptop
+1. Run the following command in PowerShell:
     ```powershell
     wsl --install -d Ubuntu-26.04
     ```
-1. Restart your laptop
-1. Install `WSL` extension in VSC
+1. Restart your laptop again
+1. Open VSC and install `WSL` extension
 1. Open the WSL instance by running inside PowerShell: `wsl`. At the first run it will ask you to create a username and password. Choose whatever you want and remember the credentials.
 1. Connect to the WSL instance. In the left-bottom corner you might click on that icon then connect to your machine: <img src="./assets/remote.png" alt="remote icon" width="30">
 1. Install `C/C++` extension while you are connected to WSL (`Install in WSL` option)
