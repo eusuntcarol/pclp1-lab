@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+	char s[] = "red,green,blue";
+	char *tok = strtok(s, ",");
+
+	while (tok != NULL) {
+		printf("%s\n", tok);
+		tok = strtok(NULL, ",");
+	}
+
+	return 0;
+}
